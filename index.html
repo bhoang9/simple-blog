@@ -8,70 +8,97 @@
 			<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 			<link rel="stylesheet" href="styles.css">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 			<style>
 
-				#getting-around{
-					text-align:center;
-					max-width: 800px;
-					margin: 0 auto;
-				}
+				header{
+					background-color: rgba(0,0,0, .7);
+					position:fixed;
+					z-index: 10;
+					top:0;
+					left:0;
+					width: 100%;
+					color: #fff;
+					padding: 35px 100px 20px;
 
-				#getting-around ul{
 					display: flex;
-					flex:direction: row;
-					flex-wrap: wrap;
-					justify-content: center;
-					align-items:  flex-start;
-					margin-bottom: 60px;
-				}
-
-				#getting-around p{
-					margin-bottom: 20px;
+					justify-content: space-around;
 
 				}
 
-				#getting-around ul.grid li{
-					flex-basis: 30%;
-					padding: 0 20px;
-					margin-bottom: 40px;
+				header a{
+					text-decoration:  none;
+					color: white;
+					opacity: .6;
+					cursor: pointer;
 
 				}
 
-				.icoP{
-					font-size: 40px;
-					color: #2196f3;
-					margin-bottom:20px;
+				header a:hover{
+					opacity: 1;
+	
+					
 				}
 
-				#getting-around ul.grid li h4{
-					color: #555;
-					font-size: 20px;
-					margin-bottom: 10px;
+				header nav ul{
+					font-size: 14px;
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-end;
+
 				}
 
-				#getting-around ul.grid li p{
-					text-align: left;
-					margin:0;
+				header nav li{
+					margin: 0 6px;
 				}
 
+				header nav li: first-child{
+					margin-left: 0;
+				}
+
+				header nav li: last-child{
+					margin-right: 0;
+				}
 				@media(max-width: 1000px){
-					#getting-around{
-						padding: 0 40px;
+					header{
+						text-align: center;
+						flex-direction: column;
+						padding: 20px 50px;
 					}
 
-					#getting-around ul.grid li{
-						flex-basis: 70%;
-						margin-bottom: 65px;
+					header img{
+						width: 75%;
 					}
 
-					#getting-around ul.grid li p{
-						text-align:center;
+					header nav{
+						justify-content: space-around;
+					}
+
+					header h2{
+						margin-bottom: 15px;
 					}
 				}
+
 			</style>
-			}
+		
 		</head>
 		<body id="top">
+
+			<header>
+				<h2><a href="#" target="_blank"><img src="img/logo.png" alt=""></a></h2>
+				<nav>
+					<ul>
+						<li><a href="#top">Top</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#getting-around">Travel</a></li>
+						<li><a href="#famous-quotes">Quoutes</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#social-media">Links</a></li>
+					</ul>
+				</nav>
+			</header>
+
 			<div id="hero">
 				<div class="background-image"></div>
 				<h1>Beautiful Alaskan Portofolio</h1>
@@ -119,6 +146,36 @@
 					<li> <i class=" fas fa-taxi ico"></i><h4>Taxis</h4><p>A motor vehicle licensed to transport passengers in return for payment of a fare.</p></li>
 
 			</div>
+			<hr>
+
+			<div id="famous-quotes">
+				<h3 class="title"></h3>
+
+				<p class="portrait"><img src="img/dickens.jpg" alt="charles dickens" class=" portrait-photos"></p>
+				<p class="quote">&ldquo;No one is useless in this world who lightens the burden of it to anyone else. &rdquo;</p>
+				<p class="author">&mdash; Charles dickens</p>
+
+				<p class="portrait"><img src="img/Franklin.jpg" alt="Ben Franklin" class=" portrait-photos"></p>
+				<p class="quote">&ldquo;An investment in knowledge pays the best interest.&rdquo;</p>
+				<p class="author">&mdash; Ben Franklin</p>
+
+				<p class="portrait"><img src="img/leonardo.jpg" alt="Leonardo Da Vinci" class=" portrait-photos"></p>
+				<p class="quote">&ldquo;Learning never exhausts the mind.&rdquo;</p>
+				<p class="author">&mdash; Leonardo Da Vinci</p>
+
+
+			</div>
+
+			<div id="contact">
+				<h3 class="title">My Studio Location </h3>
+				<section class="flexbox-setion">
+					<p>Map</p>
+					<p>221 Baker <br>
+					London, UK
+					</p>
+
+				</section>
+			</div>
 			<footer id="social-media">
 				<ul>
 					<li><a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
@@ -129,5 +186,21 @@
 				<p>&copy; <!-- <script>document.write(new Date().getFullYear());</script> --> It sure is fun to create websites.</p> 
 				<p>&ldquo;Tell me and I forget, teach me and I may remember, involve me and I learn. &rdquo; &mdash;Benjamin Franklin</p>
 			</footer>
+
+			<script type="text/javascript">
+	$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+	        window.location.hash = target;
+		});
+	       });
+});
+</script>
 		</body>
 	</html>
