@@ -1,0 +1,58 @@
+html{
+	background-color: #DCDCDC;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+#navbar{
+	width: 100%;
+	overflow: hidden;
+	background-color: #004080;
+	position: relative;
+	top: 0; 
+	margin-bottom: 50px;
+}
+
+#page_title{
+	color: #fffaf0;
+}
+
+.text_post{
+	width: 30%;
+	height: auto;
+	background-color: white;
+	margin: auto;
+}
+
+#post_title{
+	color: #B22222;
+}
+
+#post_text{
+	background-color: ;
+}
+
+#post_content{
+	margin-left: 10px;
+}
+
+.popup-content{
+	margin-top: : 40px;
+
+}
+
+.item_list{
+    background-color: #E5F2F2;
+    width: 100px;
+    margin: auto;
+   }
+
+#input_box{
+	width: 50%;
+}
