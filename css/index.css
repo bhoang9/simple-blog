@@ -30,6 +30,14 @@ body{
 	margin: auto;
 }
 
+.input_area{
+	width: 50%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+
+}
+
 #post_title{
 	color: #B22222;
 }
@@ -42,16 +50,7 @@ body{
 	margin-left: 10px;
 }
 
-.popup-content{
-	margin-top: : 40px;
 
-}
-
-.item_list{
-    background-color: #E5F2F2;
-    width: 100px;
-    margin: auto;
-   }
 
 #input_box{
 	width: 50%;

@@ -8,23 +8,27 @@
     </head>
 
 <body>
+
     <div id="navbar">
         <h1 id="page_title">Webpage title goes here</h1>
     </div>
 
     <% for (let i = 0; i < posts.length; i++) { %>
-        <form>
-            <article action="deletepost" method="delete">
-                <p name="title"><%= posts[i].title %></p>
+        <form action="deletepost?_method=delete" method="post">
+            <article>
+                <p name="title_p"><%= posts[i].title %></p>
                 <p name="body_content"><%= posts[i].body_content %></p>
                 <p name="id"><%= posts[i].id %></p>
-                <input type="submit" value="delete"></input>
+                <input type="hidden" name="title"><%= posts[i].title %></input>
             </article>
+            <input type="submit" name="_method" value="delete"></input>
         </form>
     <% } %>
     <form action="addpost" method="POST">
-        <input type="text" name="title"></input>
-        <textarea name="body_content"></textarea>
+        <div class="input_area">
+            <input type="text" name="title"></input>
+            <textarea name="body_content"></textarea>
+        </div>
         <input type="submit" value="Add Post"/>
     </form>
 

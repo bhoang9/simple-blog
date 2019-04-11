@@ -11,7 +11,7 @@ exports.post_create = function(req, res){
 		title: req.body.title,
 		body_content: req.body.body_content
 	});
-
+	console.log("post create has been executed");
 	post.save().then( result => {
 		res.redirect('/');
 	}).catch(err => {
@@ -20,14 +20,15 @@ exports.post_create = function(req, res){
 };
 
 exports.post_delete = function(req, res){
-	/*
+	//var post_title = document.getElementById('1st post').value;
+
 	Post.deleteOne({title: req.body.title}, function(err){
 		if(err) return next(err);
-		res.send('Delete successful');
-		console.log('delete successful');
+		res.redirect('/');
+		//console.log('delete successful');
 	});
-	*/
-	console.log(req.body.title + "/n");
-	console.log(req.body.body_content);
-	console.log("anybody home?!?!?!");
+	
+	//console.log(req.body.title + "/n");
+	//console.log(req.body.body_content);
+	//console.log("anybody home?!?!?!");
 };
