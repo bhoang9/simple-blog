@@ -9,5 +9,8 @@ router.get("/", post_controller.serve_main);
 //Router for creating a new post
 router.post('/addPost', post_controller.post_create);
 
+//Router for deleting a post
+router.delete('/deletepost', post_controller.post_delete);
+
 //Export this router to be used in main app.js
 module.exports = router;
