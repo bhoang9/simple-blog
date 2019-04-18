@@ -14,28 +14,38 @@
     </div>
 
     <% for (let i = 0; i < posts.length; i++) { %>
-        <form action="deletepost?_method=delete" method="post">
             <article>
-                <input type="hidden" name="title_p" value="<%= posts[i].title %>">
-                <%= posts[i].title %></input>
-                <input type="hidden" name="body_content" value="<%= posts[i].title %>">
-                <%= posts[i].body_content %></input>
-                <p name="id" id="post_id"><%= posts[i].id %></p>
+
+                <form action="getblogpost" method="GET">
+                    <button class="post_link"><%= posts[i].title %></button>
+                </form>
+                <p> <%= posts[i].body_content %> </p>
+
             </article>
-            <input type="submit" name="_method" value="delete"></input>
-        </form>
+            <form action="deletepost?_method=delete" method="post">
+                <input type="hidden" name="title_p" value="<%= posts[i].title %>"></input>
+                <input type="hidden" name="body_content" value="<%= posts[i].title %>"></input>
+                <input type="submit" name="_method" value="delete"></input>
+            </form>
     <% } %>
-    <form action="addpost" method="POST">
-        <div class="input_area">
-            <input type="text" name="title"></input>
-            <textarea name="body_content"></textarea>
-        </div>
-        <input type="submit" value="Add Post"/>
-    </form>
+
+    <button class="collapsible">Add new post</button>
+    <div class="content">
+        <form action="addpost" method="POST">
+            <div class="input_area">
+                <input type="text" name="title"></input>
+                <textarea name="body_content"></textarea>
+            </div>
+            <input type="submit" value="Add Post"/>
+        </form>
+    </div>
 
     <form action="getblogpost" method="GET">
         <input type="submit" value="Get Post"/>
     </form>
+
+    <script type="text/javascript" src="scripts/index.js">
+    </script>
 
 </body>
 </html>

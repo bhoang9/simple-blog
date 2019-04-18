@@ -7,7 +7,7 @@ exports.serve_main = function(req, res){
 };
 
 exports.serve_blog_post = function(req,res){
-	res.render('blog_post');
+	res.render('blog_post', {posts: posts});
 }
 
 exports.post_create = function(req, res){
