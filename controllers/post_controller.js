@@ -6,6 +6,10 @@ exports.serve_main = function(req, res){
 	})
 };
 
+exports.serve_blog_post = function(req,res){
+	res.render('blog_post');
+}
+
 exports.post_create = function(req, res){
 	let post = new Post({
 		title: req.body.title,

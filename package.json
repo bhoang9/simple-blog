@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bhoang9/simple-blog/issues"
   },
-  "homepage": "https://github.com/bhoang9/simple-blog#readme"
+  "homepage": "https://github.com/bhoang9/simple-blog#readme",
+  "dependencies": {
+    "handlebars": "^4.1.2"
+  }
 }
