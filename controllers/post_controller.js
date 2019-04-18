@@ -7,7 +7,10 @@ exports.serve_main = function(req, res){
 };
 
 exports.serve_blog_post = function(req,res){
-	res.render('blog_post', {posts: posts});
+	Post.findById(req.body.post_id, (err,blog_post) => {
+		res.render('blog_post', {blog_post: blog_post});
+	})
+	
 }
 
 exports.post_create = function(req, res){
