@@ -25,14 +25,14 @@ exports.post_create = function(req, res){
 
 exports.post_delete = function(req, res){
 	//var post_title = document.getElementById('1st post').value;
-	/*
-	Post.deleteOne({title: req.body.title}, function(err){
+	
+	Post.deleteOne({title: req.body.title_p}, function(err){
 		if(err) return next(err);
 		res.redirect('/');
-		//console.log('delete successful');
+		console.log('delete successful');
 	});
-	*/
-	console.log(req.body.title_p + "title here");
-	console.log(req.body.body_content + " body here");
-	console.log("anybody home?!?!?!");
+	
+	//console.log(req.body.title_p + "title here");
+	//console.log(req.body.body_content + " body here");
+	//console.log("anybody home?!?!?!");
 };
