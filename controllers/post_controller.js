@@ -7,9 +7,14 @@ exports.serve_main = function(req, res){
 };
 
 exports.serve_blog_post = function(req,res){
-	Post.findById(req.body.post_id, (err,blog_post) => {
+	Post.findById(req.params.post_id, (err,blog_post) => {
 		res.render('blog_post', {blog_post: blog_post});
 	})
+	
+
+	console.log("post id is: " + req.params.post_id);
+	//console.log("post id2 is: " + req.body.post_id);
+	//console.log("post title is: " + req.body.title_p);
 	
 }
 
