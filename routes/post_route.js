@@ -7,7 +7,7 @@ const post_controller = require('../controllers/post_controller');
 router.get("/", post_controller.serve_main);
 
 //Router for new page
-router.get("/:post_id", post_controller.serve_blog_post);
+router.get("/getblogpost/:id", post_controller.serve_blog_post);
 
 //Router for creating a new post
 router.post('/addPost', post_controller.post_create);
