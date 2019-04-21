@@ -1,0 +1,45 @@
+html{
+	background-color: #DCDCDC;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+body{
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+
+#navbar{
+	width: 100%;
+	overflow: hidden;
+	background-color: #004080;
+	position: relative;
+	top: 0; 
+	margin-bottom: 50px;
+}
+
+#page_title{
+	color: #8B0000;
+}
+
+#page_title_button{
+	font-size: 2em;
+	color: #fffaf0;	
+}
+
+.text_post{
+	width: 30%;
+	height: auto;
+	background-color: white;
+	margin: 0 auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.home_link{
+	font-size: 2em;
+	background: none;
+	border: none;
+}

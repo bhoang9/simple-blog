@@ -3,14 +3,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/index.css"/>
+        <link rel="stylesheet" href="css/blog_post.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
 
 <body>
 
     <div id="navbar">
+        <!--
         <h1 id="page_title">Webpage title goes here</h1>
+    -->
+        <form action="home" method="get">
+            <button class="home_link " id="page_title_button">Website title goes here </button>
+        </form>
+    </div>
+
+    <div id="post_content" class="text_post">
+        <h2 id="page_title"> <%= blog_post.title %> </h2>
+        <p> <%= blog_post.body_content %> </p>
     </div>
 </body>
 </html>

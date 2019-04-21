@@ -23,11 +23,16 @@ body{
 	color: #fffaf0;
 }
 
+#page_title_button{
+	font-size: 2em;
+	color: #fffaf0;	
+}
+
 .text_post{
-	width: 30%;
+	width: 50%;
 	height: auto;
 	background-color: white;
-	margin: auto;
+	margin: 0 auto;
 }
 
 .input_area{
@@ -55,6 +60,7 @@ body{
 }
 
 .post_link{
+	font-size: 1.5em;
 	background: none;
 	border: none;
 }
