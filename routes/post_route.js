@@ -8,6 +8,8 @@ router.get("/", post_controller.serve_main);
 
 router.get("/home", post_controller.serve_main);
 
+router.put("/postUpdate", post_controller.post_update);
+
 //Router for new page
 router.get("/getblogpost", post_controller.serve_blog_post);
 
