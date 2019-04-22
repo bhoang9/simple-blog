@@ -35,15 +35,6 @@ exports.post_create = function(req, res){
 
 };
 
-exports.post_update = function(req, res){
-	Post.findByIdAndUpdate({id: req.body.id}, {body_content: req.body_content},
-		function(err){
-			if(err) return next(err);
-			res.redirect('/');
-			console.log('update successful');
-		})
-}
-
 exports.post_delete = function(req, res){
 
 	//Post.deleteOne({id: req.body.post_id}, function(err){

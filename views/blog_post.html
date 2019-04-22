@@ -30,22 +30,6 @@
             <input type="hidden" name="post_id" value="<%= blog_post.id %>"></input>
             <input type="submit" name="_method" value="delete"></input>
         </form>
-
-        <div id="collapsible_div">
-            <button class="collapsible" id="update_post_button">Update post</button>
-            <div class="content">
-                <form action="postupdate?_method=put" method="POST">
-                    <div class="input_area">
-                        <!--
-                        <input type="text" name="title"></input>
-                    -->
-                        <textarea name="body_content"></textarea>
-                    </div>
-                    <input type="hidden" name="id" value="<%= blog_post.id %>"></input>
-                    <input type="submit" value="Update Post"/>
-                </form>
-            </div> <!--content div end -->
-        </div> <!--collapsible div end -->
     </div> <!--post_buttons div end -->
         <script type="text/javascript" src="scripts/index.js">
         </script>
