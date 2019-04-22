@@ -40,9 +40,13 @@ body{
 	margin: 0 auto;
 }
 
+.blog_entry{
+	background-color: #f2f2f2;
+}
+
 .input_area{
-	width: 50%;
-	height: 50%;
+	width: auto;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 
