@@ -28,6 +28,11 @@ body{
 	color: #fffaf0;	
 }
 
+.body_contents{
+	width: 50%;
+	margin: auto;
+}
+
 .text_post{
 	width: 50%;
 	height: auto;
@@ -41,18 +46,6 @@ body{
 	display: flex;
 	flex-direction: column;
 
-}
-
-#post_title{
-	color: #B22222;
-}
-
-#post_text{
-	background-color: ;
-}
-
-#post_content{
-	margin-left: 10px;
 }
 
 #input_box{
@@ -70,9 +63,10 @@ body{
 	color: #444;
 	cursor: pointer;
 	padding: 18px;
-	width: 100%;
+	width: 50%;
+	margin: auto;
 	border: none;
-	text-align: left;
+	/*text-align: left;*/
 	outline: none;
 	font-size: 15px;
 }

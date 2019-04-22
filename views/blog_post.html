@@ -21,6 +21,14 @@
     <div id="post_content" class="text_post">
         <h2 id="page_title"> <%= blog_post.title %> </h2>
         <p> <%= blog_post.body_content %> </p>
+    
+
+        <form action="deletepost?_method=delete" method="post">
+            <input type="hidden" name="title_p" value="<%= blog_post.title %>"></input>
+            <input type="hidden" name="body_content" value="<%= blog_post.body_content %>"></input>
+            <input type="submit" name="_method" value="delete"></input>
+        </form>
+
     </div>
 </body>
 </html>

@@ -17,43 +17,37 @@
             <button class="post_link " id="page_title_button">Website title goes here </button>
         </form>
     </div>
+    <div class="body_contents">
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <div class="blog_entry">
+                <article>
+                    <form action="getblogpost" method="GET">
+                    <!--
+                        <input type="hidden" name="title_p" value="<%= posts[i].title %>"></input>
+                    -->
+                        <input type="hidden" name="post_id" value="<%= posts[i].id %>"></input>
+                        <button class="post_link"><%= posts[i].title %></button>
+                    </form>
+                    <p> <%= posts[i].body_content %> </p>
 
-    <% for (let i = 0; i < posts.length; i++) { %>
-            <article>
-                <form action="getblogpost" method="GET">
-                <!--
-                    <input type="hidden" name="title_p" value="<%= posts[i].title %>"></input>
-                -->
-                    <input type="hidden" name="post_id" value="<%= posts[i].id %>"></input>
-                    <button class="post_link"><%= posts[i].title %></button>
-                </form>
-                <p> <%= posts[i].body_content %> </p>
-
-            </article>
-            <form action="deletepost?_method=delete" method="post">
-                <input type="hidden" name="title_p" value="<%= posts[i].title %>"></input>
-                <input type="hidden" name="body_content" value="<%= posts[i].title %>"></input>
-                <input type="submit" name="_method" value="delete"></input>
-            </form>
-    <% } %>
-
-    <button class="collapsible">Add new post</button>
-    <div class="content">
-        <form action="addpost" method="POST">
-            <div class="input_area">
-                <input type="text" name="title"></input>
-                <textarea name="body_content"></textarea>
+                  </article>
             </div>
-            <input type="submit" value="Add Post"/>
-        </form>
+        <% } %>
+
+          <button class="collapsible">Add new post</button>
+        <div class="content">
+            <form action="addpost" method="POST">
+                <div class="input_area">
+                    <input type="text" name="title"></input>
+                    <textarea name="body_content"></textarea>
+                </div>
+                <input type="submit" value="Add Post"/>
+            </form>
+        </div>
+
+          <script type="text/javascript" src="scripts/index.js">
+        </script>
     </div>
-
-    <form action="getblogpost" method="GET">
-        <input type="submit" value="Get Post"/>
-    </form>
-
-    <script type="text/javascript" src="scripts/index.js">
-    </script>
 
 </body>
 </html>
